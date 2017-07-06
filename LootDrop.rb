@@ -1,18 +1,22 @@
 require 'colorize'
 
+@weapon_type = ["pistol", "smg", "assault rifle", "rocket launcher", "shotgun", "sniper rifle"]
+
+
+
 def common_items
 	common_guns = ["Jacobs", "Dahl"]
-	puts "You found a common #{common_guns.sample} weapon."
+	puts "You found a common #{common_guns.sample} #{@weapon_type.sample}."
 end
 
 def uncommon_items
 	uncommon_guns = ["Torgue", "Vladof", "Jacobs", "Dahl"]
-	puts "You found an uncommon #{uncommon_guns.sample} weapon. :{".green
+	puts "You found an uncommon #{uncommon_guns.sample} #{@weapon_type.sample}.".green
 end
 
 def rare_items
 	rare_guns = ["Torgue", "Vladof", "Jacobs", "Dahl", "Maliwan", "Tediore"]
-	puts "You found a rare #{rare_guns.sample} weapon. :)".blue
+	puts "You found a rare #{rare_guns.sample} #{@weapon_type.sample}.".blue
 end
 
 def legendary_items
