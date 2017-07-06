@@ -1,37 +1,33 @@
 require 'colorize'
 
-def common_weapons
-	puts "You get a common weapon."
+def common_items
+	puts "You found a common item."
 end
 
-def uncommon_weapons
-	puts "You get an uncommon weapon. :{".green
+def uncommon_items
+	puts "You found an uncommon item. :{".green
 end
 
-def rare_weapons
-	puts "You get a rare weapon. :)".blue
+def rare_items
+	puts "You found a rare item. :)".blue
 end
 
-def legendary_weapons
-		puts "You get a legendary weapon, you lucky duck!".cyan
+def legendary_items
+		puts "You found a legendary item, you lucky duck!".cyan
 end
-
-
-
-# rarity_pool = [common_weapons, uncommon_weapons, rare_weapons, legendary_weapons]
 
 
 def rarity_pool
 	rand_no = rand(0..100)
 	puts rand_no
 	if rand_no <= 60
-		common_weapons
+		common_items
 	elsif rand_no <= 85
-		uncommon_weapons
+		uncommon_items
 	elsif rand_no <= 95
-		rare_weapons
+		rare_items
 	elsif rand_no <= 100
-		legendary_weapons
+		legendary_items
 	else
 		puts "Something has gone horribly wrong...".red
 	end
