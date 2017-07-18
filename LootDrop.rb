@@ -12,7 +12,6 @@ def common_items (level)
 	thing = Gun.new(level, "common")
 	puts ""
 	thing.stats
-	@inventory << thing
 end
 
 def uncommon_items (level)
@@ -21,7 +20,6 @@ def uncommon_items (level)
 	puts ""
 	thing = Gun.new(level, "uncommon")
 	thing.stats
-	@inventory << thing
 end
 
 def rare_items (level)
@@ -30,7 +28,6 @@ def rare_items (level)
 	puts ""
 	thing = Gun.new(level, "rare")
 	thing.stats
-	@inventory << thing
 end
 
 def legendary_items (level)
@@ -55,8 +52,6 @@ def rarity_pool (level)
 	end
 end
 
-@inventory = []
-
-10.times { rarity_pool(1) }
+1.times { rarity_pool(1) }
 
 
