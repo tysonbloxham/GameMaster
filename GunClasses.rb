@@ -1,14 +1,20 @@
 class Gun
-	def initialize (level)
+		@@id = 0
+	def initialize (level, rarity)
 		@level = level
-		@damage = (rand(60..100) * @level)
-		@accuracy = rand (70..90)
+
+		@rarity = rarity
+		# Possibly implement a rarity hash which takes rarity names and maps them out to a multiplier which will be applied on top of the level multiplier
+
+		@damage = (rand(50..100) * @level)
+		@accuracy = rand (50..90)
 		@range = 60
 		@rate = 5
 
-		@manufacturer = ["Torgue", "Vladof", "Jacobs", "Dahl", "Maliwan", "Tediore"].sample
+		@manufacturer = ["Torgue", "Vladof", "Jacobs", "Dahl", "Hyperion", "Maliwan", "Tediore"].sample
 		@elemental_damage = 0
 		@element = "None"
+		@@id += 1
 
 		case @manufacturer
 		when "Maliwan"
@@ -27,22 +33,24 @@ class Gun
 		puts "I ascend!"
 	end
 
-	def shooting
+	def stats
+		puts "id: #{@@id}"
+		puts "level: #{@level}"
+		puts "rarity: #{@rarity}"
+
 		puts "damage: #{@damage}"
 		puts "accuracy: #{@accuracy}"
 		puts "range: #{@range}"
 		puts "rate: #{@rate}"
-	end
 
-	def elemental_effect
 		puts "manufacturer: #{@manufacturer}"
 		puts "elemental damage: #{@elemental_damage}"
 		puts "element: #{@element}"
 	end
 end
 
-thing = Gun.new(1)
+# thing = Gu n.new(1, "uncommon")
 
-thing.shooting
-puts ""
-thing.elemental_effect
+# thing.shooting
+# puts ""
+# thing.elemental_effect
