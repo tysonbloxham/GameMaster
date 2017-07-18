@@ -1,4 +1,6 @@
 require 'colorize'
+require 'colorized_string'
+require './GunClasses'
 
 @weapon_type = ["pistol", "smg", "assault rifle", "rocket launcher", "shotgun", "sniper rifle"]
 
@@ -21,7 +23,7 @@ end
 
 def legendary_items
 		legendary_guns = ["Conference Call", "Hellfire", "Maggie"]
-		puts "You found a #{legendary_guns.sample}, you lucky duck!".cyan
+		puts "You found a #{legendary_guns.sample}, you lucky duck!".light_red
 end
 
 
@@ -40,6 +42,5 @@ def rarity_pool
 		puts "Something has gone horribly wrong...".red
 	end
 end
-
 
 10.times { rarity_pool }
