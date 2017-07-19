@@ -1,6 +1,6 @@
 require 'colorize'
 require 'colorized_string'
-require './GunClasses'
+require './GunClass'
 
 @weapon_type = ["pistol", "smg", "assault rifle", "rocket launcher", "shotgun", "sniper rifle"]
 

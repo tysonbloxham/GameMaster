@@ -1,5 +1,5 @@
 class Gun
-		@@id = 0
+	@@id = 0
 	def initialize (level, rarity)
 		@level = level
 
@@ -12,7 +12,7 @@ class Gun
 		}
 
 		@damage = ((rand(50..100) * @level) * @rarity_mult[@rarity] )
-		@accuracy = rand (50..90)
+		@accuracy = rand(40..90)
 		@range = 60
 		@rate = 5
 
@@ -47,13 +47,14 @@ class Gun
 		puts "damage: #{@damage}"
 		puts "accuracy: #{@accuracy}"
 		puts "range: #{@range}"
-		puts "rate: #{@rate}"
+		puts "rate of fire: #{@rate}"
 
 		puts "manufacturer: #{@manufacturer}"
 		puts "elemental damage: #{@elemental_damage}"
 		puts "element: #{@element}"
 	end
 end
+
 
 # thing = Gun.new(1, "common")
 # thing.stats
