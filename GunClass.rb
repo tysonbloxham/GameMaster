@@ -2,6 +2,7 @@ class Gun
 	@@id = 0
 	def initialize (level, rarity)
 		@level = level
+		@type = "Gun"
 
 		@rarity = rarity
 
@@ -41,6 +42,7 @@ class Gun
 	def stats
 		puts "id: #{@@id}"
 		puts "level: #{@level}"
+		puts "type: #{@type}"
 		puts "rarity: #{@rarity}"
 		puts "rarity multiplier: #{@rarity_mult[@rarity]}"
 
