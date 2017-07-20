@@ -2,7 +2,7 @@ class Gun
 	@@id = 0
 	def initialize (level, rarity)
 		@level = level
-		@type = "Gun"
+		@type ||= "Gun"
 
 		@rarity = rarity
 
@@ -12,28 +12,32 @@ class Gun
 			"rare" => 1.5
 		}
 
-		@damage = ((rand(50..100) * @level) * @rarity_mult[@rarity] )
-		@accuracy = rand(40..90)
-		@range = 60
-		@rate = 5
+		@damage ||= ((rand(50..100) * @level) * @rarity_mult[@rarity] ).floor
+		@pellet_count ||= 1
+		@accuracy ||= rand(40..80)
+		@range ||= 60
+		@rate ||= 5
 
-		@manufacturer = ["Torgue", "Vladof", "Jacobs", "Dahl", "Hyperion", "Maliwan", "Tediore"].sample
+		# After testing is done, be sure to remove the condidtional assignment from @manufacturer
+		@manufacturer ||= ["Torgue", "Vladof", "Jacobs", "Dahl", "Hyperion", "Maliwan", "Tediore"].sample
 		@elemental_damage = 0
 		@element = "None"
 
 		case @manufacturer
 		when "Maliwan"
-			@elemental_damage = ((rand(100..200) * @level) * @rarity_mult[@rarity] )
+			@elemental_damage = ((rand(20..50) * @level) * @rarity_mult[@rarity] ).floor
 			@element = ["slag", "fire", "corrosive"].sample
 		when "Torgue"
-			@elemental_damage = ((rand(10..20) * @level) * @rarity_mult[@rarity] )
+			@elemental_damage = ((rand(10..20) * @level) * @rarity_mult[@rarity] ).floor
 			@element = "explosive"
-			@rate = 3
+			@rate -= 2
 		when "Vladof"
-			@rate = 7			
+			@rate += 2			
 		when "Jacobs"
-			@damage = ((rand(80..120) * @level) * @rarity_mult[@rarity] )
-			@accuracy = rand(80..100)
+			@damage = (@damage * 1.2).floor
+			@accuracy = (@accuracy * 1.1).floor
+		when "Hyperion"
+			@accuracy = (@accuracy / 1.4).floor
 		end
 		puts "I ascend!"
 		@@id += 1
@@ -47,6 +51,7 @@ class Gun
 		puts "rarity multiplier: #{@rarity_mult[@rarity]}"
 
 		puts "damage: #{@damage}"
+		puts "pellet count: #{@pellet_count}"
 		puts "accuracy: #{@accuracy}"
 		puts "range: #{@range}"
 		puts "rate of fire: #{@rate}"
