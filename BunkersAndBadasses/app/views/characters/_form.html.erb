@@ -10,48 +10,105 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :character_name %>
-    <%= form.text_field :character_name, id: :character_character_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :level %>
-    <%= form.number_field :level, id: :character_level %>
-  </div>
-
-  <div class="field">
-    <%= form.label :experience %>
-    <%= form.number_field :experience, id: :character_experience %>
-  </div>
-
-  <div class="field">
-    <%= form.label :health %>
-    <%= form.number_field :health, id: :character_health %>
-  </div>
-
-  <div class="field">
-    <%= form.label :action_points %>
-    <%= form.number_field :action_points, id: :character_action_points %>
-  </div>
-
-  <div class="field">
-    <%= form.label :badass_points %>
-    <%= form.number_field :badass_points, id: :character_badass_points %>
-  </div>
-
-  <div class="field">
-    <%= form.label :evasion %>
-    <%= form.number_field :evasion, id: :character_evasion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :character_class %>
-    <%= form.text_field :character_class, id: :character_character_class %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2">
+      <div class="card">
+        <%= image_tag "Gunzerker.jpg", alt: "Person holding two large guns", class: "card-img-top", height: 240 %>
+        <div class="card-block">
+          <h4 class="card-title">Gunzerker</h4>
+          <p class="card-text">"B IS FOR BULLETS! BITCH!"</p>
+          <br>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#gunzerkerStats" aria-expanded="false" aria-controls="gunzerkerStats">Select</button>
+          <div class="collapse" id="gunzerkerStats">
+            <div class="card-block">
+              You is Gunzerker!          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2">
+      <div class="card">
+        <%= image_tag "Siren.jpg", alt: "A woman holding a ball of energy", class: "card-img-top", height: 240 %>
+        <div class="card-block">
+          <h4 class="card-title">Siren</h4>
+          <p class="card-text">"If anyone tries to capture me, I'll incinerate their brain."</p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#sirenStats" aria-expanded="false" aria-controls="sirenStats">Select</button>
+          <div class="collapse" id="sirenStats">
+            <div class="card-block">
+              You make phase lock!          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2">
+      <div class="card">
+        <%= image_tag "Psycho.png", alt: "A woman holding a ball of energy", class: "card-img-top", height: 240 %>
+        <div class="card-block">
+          <h4 class="card-title">Psycho</h4>
+          <p class="card-text">"How can I snap your neck if you don't have one?!"</p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#psychoStats" aria-expanded="false" aria-controls="psychoStats">Select</button>
+          <div class="collapse" id="psychoStats">
+            <div class="card-block">
+              Y U NO HAVE BLOOD IN YOU?!!         
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2">
+      <div class="card">
+        <%= image_tag "Assassin.jpg", alt: "A woman holding a ball of energy", class: "card-img-top", height: 240 %>
+        <div class="card-block">
+          <h4 class="card-title">Assassin</h4>
+          <p class="card-text">"Leaves falling from trees / Snow drifting onto the ground / Life leaving your corpse."</p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#assassinStats" aria-expanded="false" aria-controls="assassinStats">Select</button>
+          <div class="collapse" id="assassinStats">
+            <div class="card-block">
+              You make phase lock!          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2">
+      <div class="card">
+        <%= image_tag "Mechromancer.jpg", alt: "A woman holding a ball of energy", class: "card-img-top", height: 240 %>
+        <div class="card-block">
+          <h4 class="card-title">Mechromancer</h4>
+          <p class="card-text">"To hell with the first law!"</p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#mechromancerStats" aria-expanded="false" aria-controls="mechromancerStats">Select</button>
+          <div class="collapse" id="mechromancerStats">
+            <div class="card-block">
+              D374-TP online
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2">
+      <div class="card">
+        <%= image_tag "Commando.png", alt: "A man with a rifle, standing next to a turret", class: "card-img-top", height: 240 %>
+        <div class="card-block">
+          <h4 class="card-title">Commando</h4>
+          <p class="card-text">"Ten years of Dahl military experience at your service."</p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#commandoStats" aria-expanded="false" aria-controls="commandoStats">Select</button>
+          <div class="collapse" id="commandoStats">
+            <div class="card-block">
+              You can summon turret!          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

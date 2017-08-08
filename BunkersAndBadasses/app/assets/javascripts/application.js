@@ -12,4 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require bootstrap
 //= require_tree .
+
+$(‘.collapse’).on(‘show.bs.collapse’, function (e) {
+    $(‘.collapse’).not(e.target).removeClass(‘in’);
+});
