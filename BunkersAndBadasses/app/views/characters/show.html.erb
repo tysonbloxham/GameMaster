@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character name:</strong>
+  <%= @character.character_name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @character.level %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @character.experience %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @character.health %>
+</p>
+
+<p>
+  <strong>Action points:</strong>
+  <%= @character.action_points %>
+</p>
+
+<p>
+  <strong>Badass points:</strong>
+  <%= @character.badass_points %>
+</p>
+
+<p>
+  <strong>Evasion:</strong>
+  <%= @character.evasion %>
+</p>
+
+<p>
+  <strong>Character class:</strong>
+  <%= @character.character_class %>
+</p>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back', characters_path %>
