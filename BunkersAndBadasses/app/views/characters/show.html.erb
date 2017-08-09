@@ -40,18 +40,12 @@
         </div>
       </p>
 
-
       <p>
         <strong>Health:</strong>
-        <%= @character.health %>
+        <%= @character.current_health %> / <%= @character.health %>
         <div class="progress">
           <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <%= (@character.current_health.to_f / @character.health.to_f) * 100 %>%"></div>
         </div>
-      </p>
-
-      <p>
-        <strong>Current Health</strong>
-        <%= @character.current_health %>
       </p>
 
       <p>
