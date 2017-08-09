@@ -1,8 +1,47 @@
 @import "bootstrap";
 
+.card-header {
+  cursor: pointer;
+}
+
 .gunzerker {
   height: 10rem;
-  background: url(Gunzerker_banner.jpeg);
+  background: url(Gunzerker_banner_alt.png);
+  background-size: 100% 10rem;
+  background-repeat: no-repeat;
+}
+
+.siren {
+  height: 10rem;
+  background: url(Siren_Banner.png);
+  background-size: 100% 10rem;
+  background-repeat: no-repeat;
+}
+
+.commando {
+  height: 10rem;
+  background: url(Commando_banner.jpeg);
+  background-size: 100% 10rem;
+  background-repeat: no-repeat;
+}
+
+.assassin {
+  height: 10rem;
+  background: url(Assassin_banner.png);
+  background-size: 100% 10rem;
+  background-repeat: no-repeat;
+}
+
+.psycho {
+  height: 10rem;
+  background: url(Psycho_banner.jpeg);
+  background-size: 100% 10rem;
+  background-repeat: no-repeat;
+}
+
+.mechromancer {
+  height: 10rem;
+  background: url(Mechromancer_banner.png);
   background-size: 100% 10rem;
   background-repeat: no-repeat;
 }
