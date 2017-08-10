@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assassins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character name</th>
+      <th>Level</th>
+      <th>Experience</th>
+      <th>Health</th>
+      <th>Current health</th>
+      <th>Action points</th>
+      <th>Badass points</th>
+      <th>Evasion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assassins.each do |assassin| %>
+      <tr>
+        <td><%= assassin.character_name %></td>
+        <td><%= assassin.level %></td>
+        <td><%= assassin.experience %></td>
+        <td><%= assassin.health %></td>
+        <td><%= assassin.current_health %></td>
+        <td><%= assassin.action_points %></td>
+        <td><%= assassin.badass_points %></td>
+        <td><%= assassin.evasion %></td>
+        <td><%= link_to 'Show', assassin %></td>
+        <td><%= link_to 'Edit', edit_assassin_path(assassin) %></td>
+        <td><%= link_to 'Destroy', assassin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assassin', new_assassin_path %>

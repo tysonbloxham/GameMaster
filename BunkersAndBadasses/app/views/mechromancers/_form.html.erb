@@ -1,0 +1,57 @@
+<%= form_with(model: mechromancer, local: true) do |form| %>
+  <% if mechromancer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mechromancer.errors.count, "error") %> prohibited this mechromancer from being saved:</h2>
+
+      <ul>
+      <% mechromancer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :character_name %>
+    <%= form.text_field :character_name, id: :mechromancer_character_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level, id: :mechromancer_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.number_field :experience, id: :mechromancer_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :health %>
+    <%= form.number_field :health, id: :mechromancer_health %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_health %>
+    <%= form.number_field :current_health, id: :mechromancer_current_health %>
+  </div>
+
+  <div class="field">
+    <%= form.label :action_points %>
+    <%= form.number_field :action_points, id: :mechromancer_action_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :badass_points %>
+    <%= form.number_field :badass_points, id: :mechromancer_badass_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evasion %>
+    <%= form.number_field :evasion, id: :mechromancer_evasion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

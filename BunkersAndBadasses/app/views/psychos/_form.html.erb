@@ -1,0 +1,57 @@
+<%= form_with(model: psycho, local: true) do |form| %>
+  <% if psycho.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(psycho.errors.count, "error") %> prohibited this psycho from being saved:</h2>
+
+      <ul>
+      <% psycho.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :character_name %>
+    <%= form.text_field :character_name, id: :psycho_character_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level, id: :psycho_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.number_field :experience, id: :psycho_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :health %>
+    <%= form.number_field :health, id: :psycho_health %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_health %>
+    <%= form.number_field :current_health, id: :psycho_current_health %>
+  </div>
+
+  <div class="field">
+    <%= form.label :action_points %>
+    <%= form.number_field :action_points, id: :psycho_action_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :badass_points %>
+    <%= form.number_field :badass_points, id: :psycho_badass_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evasion %>
+    <%= form.number_field :evasion, id: :psycho_evasion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

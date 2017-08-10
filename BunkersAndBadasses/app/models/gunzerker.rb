@@ -1,0 +1,2 @@
+class Gunzerker < ApplicationRecord
+end

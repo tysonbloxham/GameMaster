@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gunzerkers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Character name</th>
+      <th>Level</th>
+      <th>Experience</th>
+      <th>Health</th>
+      <th>Current health</th>
+      <th>Action points</th>
+      <th>Badass points</th>
+      <th>Evasion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gunzerkers.each do |gunzerker| %>
+      <tr>
+        <td><%= gunzerker.character_name %></td>
+        <td><%= gunzerker.level %></td>
+        <td><%= gunzerker.experience %></td>
+        <td><%= gunzerker.health %></td>
+        <td><%= gunzerker.current_health %></td>
+        <td><%= gunzerker.action_points %></td>
+        <td><%= gunzerker.badass_points %></td>
+        <td><%= gunzerker.evasion %></td>
+        <td><%= link_to 'Show', gunzerker %></td>
+        <td><%= link_to 'Edit', edit_gunzerker_path(gunzerker) %></td>
+        <td><%= link_to 'Destroy', gunzerker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gunzerker', new_gunzerker_path %>
