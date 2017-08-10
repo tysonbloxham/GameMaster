@@ -1,39 +1,115 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Characters</h1>
+<div class="container">
+  <h1>Characters</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Character name</th>
-      <th>Level</th>
-      <th>Experience</th>
-      <th>Health</th>
-      <th>Current Health</th>
-      <th>Action points</th>
-      <th>Evasion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @mechromancers.each do |character| %>
+  <h2 class="character-class-header">Assassins</h2>
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= character.character_name %></td>
+        <th>Character Name</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @assassins.each do |character| %>
+      <tr>
+        <td scope="row"><%= character.character_name %></td>
         <td><%= character.level %></td>
-        <td><%= character.experience %></td>
-        <td><%= character.health %></td>
-        <td><%= character.current_health %></td>
-        <td><%= character.action_points %></td>
-        <td><%= character.evasion %></td>
-        <td><%= link_to 'Show', character %></td>
-        <td><%= link_to 'Edit', edit_character_path(character) %></td>
-        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+  <h2 class="character-class-header">Commandos</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Character Name</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @commandos.each do |character| %>
+      <tr>
+        <td scope="row"><%= character.character_name %></td>
+        <td><%= character.level %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <h2 class="character-class-header">Gunzerkers</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Character Name</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @gunzerkers.each do |character| %>
+      <tr>
+        <td scope="row"><%= character.character_name %></td>
+        <td><%= character.level %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <h2 class="character-class-header">Mechromancer</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Character Name</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @mechromancers.each do |character| %>
+      <tr>
+        <td scope="row"><%= character.character_name %></td>
+        <td><%= character.level %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <h2 class="character-class-header">Psychos</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Character Name</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @psychos.each do |character| %>
+      <tr>
+        <td scope="row"><%= character.character_name %></td>
+        <td><%= character.level %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <h2 class="character-class-header">Sirens</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Character Name</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @sirens.each do |character| %>
+      <tr>
+        <td scope="row"><%= character.character_name %></td>
+        <td><%= character.level %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 
 <%= link_to 'New Character', new_character_path %>
+</div>
