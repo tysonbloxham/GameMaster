@@ -1,0 +1,2 @@
+class Psycho < ApplicationRecord
+end

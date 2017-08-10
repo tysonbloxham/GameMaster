@@ -5,6 +5,12 @@ class CharactersController < ApplicationController
   # GET /characters.json
   def index
     @characters = Character.all
+    @sirens = Siren.all
+    @assassins = Assassin.all
+    @commandos = Commando.all
+    @gunzerkers = Gunzerker.all
+    @psychos = Psycho.all
+    @mechromancers = Mechromancer.all
   end
 
   # GET /characters/1

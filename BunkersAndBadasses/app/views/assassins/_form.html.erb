@@ -1,0 +1,22 @@
+<%= form_with(model: assassin, local: true) do |form| %>
+  <% if assassin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assassin.errors.count, "error") %> prohibited this assassin from being saved:</h2>
+
+      <ul>
+      <% assassin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :character_name %>
+    <%= form.text_field :character_name, id: :assassin_character_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

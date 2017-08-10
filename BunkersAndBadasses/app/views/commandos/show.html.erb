@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character name:</strong>
+  <%= @commando.character_name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @commando.level %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @commando.experience %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @commando.health %>
+</p>
+
+<p>
+  <strong>Current health:</strong>
+  <%= @commando.current_health %>
+</p>
+
+<p>
+  <strong>Action points:</strong>
+  <%= @commando.action_points %>
+</p>
+
+<p>
+  <strong>Badass points:</strong>
+  <%= @commando.badass_points %>
+</p>
+
+<p>
+  <strong>Evasion:</strong>
+  <%= @commando.evasion %>
+</p>
+
+<%= link_to 'Edit', edit_commando_path(@commando) %> |
+<%= link_to 'Back', root_path %>

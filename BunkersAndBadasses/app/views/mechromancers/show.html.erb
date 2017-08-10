@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character name:</strong>
+  <%= @mechromancer.character_name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @mechromancer.level %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @mechromancer.experience %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @mechromancer.health %>
+</p>
+
+<p>
+  <strong>Current health:</strong>
+  <%= @mechromancer.current_health %>
+</p>
+
+<p>
+  <strong>Action points:</strong>
+  <%= @mechromancer.action_points %>
+</p>
+
+<p>
+  <strong>Badass points:</strong>
+  <%= @mechromancer.badass_points %>
+</p>
+
+<p>
+  <strong>Evasion:</strong>
+  <%= @mechromancer.evasion %>
+</p>
+
+<%= link_to 'Edit', edit_mechromancer_path(@mechromancer) %> |
+<%= link_to 'Back', root_path %>

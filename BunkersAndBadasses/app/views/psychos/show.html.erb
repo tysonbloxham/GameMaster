@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character name:</strong>
+  <%= @psycho.character_name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @psycho.level %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @psycho.experience %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @psycho.health %>
+</p>
+
+<p>
+  <strong>Current health:</strong>
+  <%= @psycho.current_health %>
+</p>
+
+<p>
+  <strong>Action points:</strong>
+  <%= @psycho.action_points %>
+</p>
+
+<p>
+  <strong>Badass points:</strong>
+  <%= @psycho.badass_points %>
+</p>
+
+<p>
+  <strong>Evasion:</strong>
+  <%= @psycho.evasion %>
+</p>
+
+<%= link_to 'Edit', edit_psycho_path(@psycho) %> |
+<%= link_to 'Back', root_path %>
