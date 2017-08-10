@@ -1,0 +1,52 @@
+<%= form_with(model: siren, local: true) do |form| %>
+  <% if siren.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(siren.errors.count, "error") %> prohibited this siren from being saved:</h2>
+
+      <ul>
+      <% siren.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :character_name %>
+    <%= form.text_field :character_name, id: :siren_character_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level, id: :siren_level %>
+  </div>
+
+  <div class="field">d
+    <%= form.label :experience %>
+    <%= form.number_field :experience, id: :siren_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :health %>
+    <%= form.number_field :health, id: :siren_health %>
+  </div>
+
+  <div class="field">
+    <%= form.label :action_points %>
+    <%= form.number_field :action_points, id: :siren_action_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :badass_points %>
+    <%= form.number_field :badass_points, id: :siren_badass_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evasion %>
+    <%= form.number_field :evasion, id: :siren_evasion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

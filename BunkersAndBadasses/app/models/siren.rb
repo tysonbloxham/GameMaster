@@ -1,0 +1,2 @@
+class Siren < ApplicationRecord
+end

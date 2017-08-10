@@ -5,6 +5,7 @@ class CharactersController < ApplicationController
   # GET /characters.json
   def index
     @characters = Character.all
+    @sirens = Siren.all
   end
 
   # GET /characters/1
