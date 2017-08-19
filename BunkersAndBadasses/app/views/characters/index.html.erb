@@ -14,7 +14,7 @@
     <tbody>
     <% @assassins.each do |character| %>
       <tr>
-        <td scope="row"><%= character.character_name %></td>
+        <td scope="row"><%= link_to character.character_name, character %></td>
         <td><%= character.level %></td>
       </tr>
     <% end %>
@@ -32,7 +32,7 @@
     <tbody>
     <% @commandos.each do |character| %>
       <tr>
-        <td scope="row"><%= character.character_name %></td>
+        <td scope="row"><%= link_to character.character_name, character %></td>
         <td><%= character.level %></td>
       </tr>
     <% end %>
@@ -50,7 +50,7 @@
     <tbody>
     <% @gunzerkers.each do |character| %>
       <tr>
-        <td scope="row"><%= character.character_name %></td>
+        <td scope="row"><%= link_to character.character_name, character %></td>
         <td><%= character.level %></td>
       </tr>
     <% end %>
@@ -68,7 +68,7 @@
     <tbody>
     <% @mechromancers.each do |character| %>
       <tr>
-        <td scope="row"><%= character.character_name %></td>
+        <td scope="row"><%= link_to character.character_name, character %></td>
         <td><%= character.level %></td>
       </tr>
     <% end %>
@@ -86,7 +86,7 @@
     <tbody>
     <% @psychos.each do |character| %>
       <tr>
-        <td scope="row"><%= character.character_name %></td>
+        <td scope="row"><%= link_to character.character_name, character %></td>
         <td><%= character.level %></td>
       </tr>
     <% end %>
@@ -104,7 +104,7 @@
     <tbody>
     <% @sirens.each do |character| %>
       <tr>
-        <td scope="row"><%= character.character_name %></td>
+        <td scope="row"><%= link_to character.character_name, character %></td>
         <td><%= character.level %></td>
       </tr>
     <% end %>
