@@ -56,7 +56,7 @@ class GunzerkersController < ApplicationController
   def destroy
     @gunzerker.destroy
     respond_to do |format|
-      format.html { redirect_to gunzerkers_url, notice: 'Gunzerker was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Gunzerker was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

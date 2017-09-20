@@ -56,7 +56,7 @@ class SirensController < ApplicationController
   def destroy
     @siren.destroy
     respond_to do |format|
-      format.html { redirect_to sirens_url, notice: 'Siren was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Siren was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

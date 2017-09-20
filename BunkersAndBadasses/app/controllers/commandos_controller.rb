@@ -56,7 +56,7 @@ class CommandosController < ApplicationController
   def destroy
     @commando.destroy
     respond_to do |format|
-      format.html { redirect_to commandos_url, notice: 'Commando was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Commando was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

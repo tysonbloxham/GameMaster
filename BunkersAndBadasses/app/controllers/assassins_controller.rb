@@ -56,7 +56,7 @@ class AssassinsController < ApplicationController
   def destroy
     @assassin.destroy
     respond_to do |format|
-      format.html { redirect_to assassins_url, notice: 'Assassin was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Assassin was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
