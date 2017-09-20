@@ -5,8 +5,6 @@
 # Character.create!(character_name: "Maya", level: 5, experience: 120, health: 100, action_points: 10, badass_points: 10, evasion: 60, character_class: "Siren", current_health: 80)
 # Character.create!(character_name: "Krieg", level: 6, experience: 140, health: 100, action_points: 10, badass_points: 10, evasion: 60, character_class: "Psycho", current_health: 80)
 
-puts "6 characters created!"
-
 Siren.create!(character_name: "Lilith")
 
 puts "1 Siren created!"
@@ -30,3 +28,5 @@ puts "1 Psycho created!"
 Mechromancer.create!
 
 puts "1 Mechromancer created!"
+
+puts "6 characters created!"
