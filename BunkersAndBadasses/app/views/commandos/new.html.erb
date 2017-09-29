@@ -1,5 +1,13 @@
-<h1>New Commando</h1>
-
-<%= render 'form', commando: @commando %>
-
-<%= link_to 'Back', new_character_path %>
+<div class="container-fluid">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="mx-auto">
+			  <h1 class="text-center pb-2">The Commando</h1>
+	  		<div class="card">
+		      <%= render 'form', commando: @commando %>
+		      <%= link_to 'Back', new_character_path, class: 'text-center pt-1' %>
+	  		</div>
+      </div>
+    </div>
+  </div>
+</div>

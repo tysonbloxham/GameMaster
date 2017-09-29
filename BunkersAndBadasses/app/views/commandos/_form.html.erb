@@ -11,47 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-control">
     <%= form.label :character_name %>
     <%= form.text_field :character_name, id: :commando_character_name %>
   </div>
 
-  <div class="field">
-    <%= form.label :level %>
-    <%= form.number_field :level, id: :commando_level %>
-  </div>
-
-  <div class="field">
-    <%= form.label :experience %>
-    <%= form.number_field :experience, id: :commando_experience %>
-  </div>
-
-  <div class="field">
-    <%= form.label :health %>
-    <%= form.number_field :health, id: :commando_health %>
-  </div>
-
-  <div class="field">
-    <%= form.label :current_health %>
-    <%= form.number_field :current_health, id: :commando_current_health %>
-  </div>
-
-  <div class="field">
-    <%= form.label :action_points %>
-    <%= form.number_field :action_points, id: :commando_action_points %>
-  </div>
-
-  <div class="field">
-    <%= form.label :badass_points %>
-    <%= form.number_field :badass_points, id: :commando_badass_points %>
-  </div>
-
-  <div class="field">
-    <%= form.label :evasion %>
-    <%= form.number_field :evasion, id: :commando_evasion %>
-  </div>
-
-  <div class="actions">
+  <div class="actions text-center pt-3">
     <%= form.submit %>
   </div>
 <% end %>
